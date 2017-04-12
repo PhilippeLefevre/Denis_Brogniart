@@ -16,14 +16,18 @@ void		Brogniart::cabane()
 {
         std::string reponse = "non";
         std::cout << "Est-ce que ca veut dire que les femmes ne savent pas faires de cabanes ?" << '\n';
-        std::cin >> reponse;
-        if (reponse == "oui")
+        while (getline(std::cin, reponse))
         {
-                ha();
-        }
-        else
-        {
-                cabane();
+                if (reponse == "oui")
+                {
+                        ha();
+                        break;
+                }
+                else
+                {
+                        std::cout << "Est-ce que ca veut dire que les femmes ne savent pas faires de cabanes ?" << '\n';
+
+                }
         }
 }
 
