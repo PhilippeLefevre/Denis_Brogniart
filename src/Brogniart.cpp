@@ -1,5 +1,3 @@
-#include	<SFML/Audio.hpp>
-#include	<SFML/System.hpp>
 #include	<iostream>
 #include	"Brogniart.hpp"
 
@@ -31,13 +29,6 @@ void		Brogniart::cabane()
 
 void		Brogniart::ha()
 {
-        sf::SoundBuffer buffer;
-        if (!buffer.loadFromFile("audio/AH.ogg"))
-        {
-                return;
-        }
-        sf::Sound sound;
-        sound.setBuffer(buffer);
-        sound.play();
         std::cout << "HA !!!" << '\n';
+        system("cvlc --play-and-exit audio/AH.ogg 2> /dev/null");
 }

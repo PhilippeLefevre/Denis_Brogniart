@@ -3,7 +3,7 @@ CXXFLAGS	=	-W -Wall -Wextra -ansi
 CXXFLAGS	+=	-std=c++11
 CXXFLAGS	+=	-I$(INC_DIR)
 
-LDFLAGS		=	-lsfml-system -lsfml-audio
+LDFLAGS		=
 
 SRC_DIR		=	src
 INC_DIR		=	inc
