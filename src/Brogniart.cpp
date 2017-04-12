@@ -31,10 +31,13 @@ void		Brogniart::cabane()
 
 void		Brogniart::ha()
 {
-        sf::Music music;
-        if (!music.openFromFile("audio/AH.ogg"))
-                return; // erreur
-        music.setVolume(100);
-        music.play();
+        sf::SoundBuffer buffer;
+        if (!buffer.loadFromFile("audio/AH.ogg"))
+        {
+                return;
+        }
+        sf::Sound sound;
+        sound.setBuffer(buffer);
+        sound.play();
         std::cout << "HA !!!" << '\n';
 }
