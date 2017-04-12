@@ -17,7 +17,7 @@ Brogniart::~Brogniart()
 void		Brogniart::cabane()
 {
         std::string reponse = "non";
-        std::cout << "Est-ce que ca veut dire que les femmes ne savent pas faires de cabandes ?" << '\n';
+        std::cout << "Est-ce que ca veut dire que les femmes ne savent pas faires de cabanes ?" << '\n';
         std::cin >> reponse;
         if (reponse == "oui")
         {
@@ -34,6 +34,7 @@ void		Brogniart::ha()
         sf::Music music;
         if (!music.openFromFile("audio/AH.ogg"))
                 return; // erreur
+        music.setVolume(100);
         music.play();
         std::cout << "HA !!!" << '\n';
 }
