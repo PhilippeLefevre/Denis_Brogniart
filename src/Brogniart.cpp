@@ -34,5 +34,5 @@ void		Brogniart::cabane()
 void		Brogniart::ha()
 {
         std::cout << "HA !!!" << '\n';
-        system("cvlc --play-and-exit audio/AH.ogg 2> /dev/null");
+        system("paplay audio/AH.ogg 2> /dev/null &");
 }
